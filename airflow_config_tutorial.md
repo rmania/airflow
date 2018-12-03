@@ -1,6 +1,6 @@
 ## Curated list of blogs, tutorials and articles on Airflow:
 
-* A great place to start [#airflow_best-practices](https://github.com/jghoman/awesome-apache-airflow#best-practices-lessons-learned-and-cool-use-cases)
+* A great place to start [airflow_best_practices](https://github.com/jghoman/awesome-apache-airflow#best-practices-lessons-learned-and-cool-use-cases)
 
 
 ## Submitting a Pull Request
@@ -46,8 +46,8 @@ Mine is : Ubuntu 18.04.1 LTS
 
 Default to SQLite option. Subpackages can be installed depending on what will be useful in your environment. For instance, if you don’t need connectivity with Postgres, you won’t have to go through the trouble of installing the postgres-devel yum package, or whatever equivalent applies on the distribution you are using.
 
-* To see list of dependent extra packages  [#airflow_extra_packaes](https://airflow.apache.org/installation.html)
+To see list of dependent extra packages  [airflow_extra_packaes](https://airflow.apache.org/installation.html)
 
-    airflow initdb
+	airflow initdb
 
 
