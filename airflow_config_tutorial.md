@@ -2,6 +2,8 @@
 
 * A great place to start [airflow_best_practices](https://github.com/jghoman/awesome-apache-airflow#best-practices-lessons-learned-and-cool-use-cases)
 
+* data testing in 7 steps with Airflow [datas-inferno-7-circles-of-data-testing-hell-with-airflow](https://medium.com/wbaa/datas-inferno-7-circles-of-data-testing-hell-with-airflow-cef4adff58d8)
+
 
 ## Submitting a Pull Request
 
@@ -20,9 +22,16 @@
 
 Mine is : Ubuntu 18.04.1 LTS
 
-**give airflow a home dir**
+**airflow needs a home, ~/airflow is the default**
 
     export AIRFLOW_HOME=~/airflow
+
+**create workspace dir + virtualenv**
+
+	$ cd ~/airflow
+	$ virtualenv -p `which python3` venv
+	$ source venv/bin/activate
+	(venv) $ 
 
 **export ENV variables**
 
