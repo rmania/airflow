@@ -1,0 +1,72 @@
+[2018-12-05 13:09:57,462] {models.py:1361} INFO - Dependencies all met for <TaskInstance: tutorial.templated 2018-12-03T00:00:00+00:00 [queued]>
+[2018-12-05 13:09:57,469] {models.py:1361} INFO - Dependencies all met for <TaskInstance: tutorial.templated 2018-12-03T00:00:00+00:00 [queued]>
+[2018-12-05 13:09:57,469] {models.py:1573} INFO - 
+--------------------------------------------------------------------------------
+Starting attempt 1 of 2
+--------------------------------------------------------------------------------
+
+[2018-12-05 13:09:57,486] {models.py:1595} INFO - Executing <Task(BashOperator): templated> on 2018-12-03T00:00:00+00:00
+[2018-12-05 13:09:57,486] {base_task_runner.py:118} INFO - Running: ['bash', '-c', 'airflow run tutorial templated 2018-12-03T00:00:00+00:00 --job_id 12 --raw -sd DAGS_FOLDER/example_dags/tutorial.py --cfg_path /tmp/tmpyrp7aly6']
+[2018-12-05 13:09:58,075] {base_task_runner.py:101} INFO - Job 12: Subtask templated [2018-12-05 13:09:58,075] {plugins_manager.py:100} ERROR - invalid syntax (my_operators.py, line 20)
+[2018-12-05 13:09:58,076] {base_task_runner.py:101} INFO - Job 12: Subtask templated Traceback (most recent call last):
+[2018-12-05 13:09:58,076] {base_task_runner.py:101} INFO - Job 12: Subtask templated   File "/home/diederik/anaconda3/lib/python3.6/site-packages/airflow/plugins_manager.py", line 89, in <module>
+[2018-12-05 13:09:58,076] {base_task_runner.py:101} INFO - Job 12: Subtask templated     m = imp.load_source(namespace, filepath)
+[2018-12-05 13:09:58,076] {base_task_runner.py:101} INFO - Job 12: Subtask templated   File "/home/diederik/anaconda3/lib/python3.6/imp.py", line 172, in load_source
+[2018-12-05 13:09:58,076] {base_task_runner.py:101} INFO - Job 12: Subtask templated     module = _load(spec)
+[2018-12-05 13:09:58,076] {base_task_runner.py:101} INFO - Job 12: Subtask templated   File "<frozen importlib._bootstrap>", line 684, in _load
+[2018-12-05 13:09:58,076] {base_task_runner.py:101} INFO - Job 12: Subtask templated   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+[2018-12-05 13:09:58,076] {base_task_runner.py:101} INFO - Job 12: Subtask templated   File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+[2018-12-05 13:09:58,076] {base_task_runner.py:101} INFO - Job 12: Subtask templated   File "<frozen importlib._bootstrap_external>", line 781, in get_code
+[2018-12-05 13:09:58,076] {base_task_runner.py:101} INFO - Job 12: Subtask templated   File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+[2018-12-05 13:09:58,077] {base_task_runner.py:101} INFO - Job 12: Subtask templated   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+[2018-12-05 13:09:58,077] {base_task_runner.py:101} INFO - Job 12: Subtask templated   File "/home/diederik/airflow/plugins/my_operators.py", line 20
+[2018-12-05 13:09:58,077] {base_task_runner.py:101} INFO - Job 12: Subtask templated     class MyFirstPlugin(AirflowPlugin):
+[2018-12-05 13:09:58,077] {base_task_runner.py:101} INFO - Job 12: Subtask templated         ^
+[2018-12-05 13:09:58,077] {base_task_runner.py:101} INFO - Job 12: Subtask templated SyntaxError: invalid syntax
+[2018-12-05 13:09:58,077] {base_task_runner.py:101} INFO - Job 12: Subtask templated [2018-12-05 13:09:58,075] {plugins_manager.py:101} ERROR - Failed to import plugin /home/diederik/airflow/plugins/my_operators.py
+[2018-12-05 13:09:58,088] {base_task_runner.py:101} INFO - Job 12: Subtask templated [2018-12-05 13:09:58,088] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2018-12-05 13:09:58,224] {base_task_runner.py:101} INFO - Job 12: Subtask templated [2018-12-05 13:09:58,224] {models.py:271} INFO - Filling up the DagBag from /home/diederik/airflow/dags/example_dags/tutorial.py
+[2018-12-05 13:09:58,293] {base_task_runner.py:101} INFO - Job 12: Subtask templated [2018-12-05 13:09:58,293] {cli.py:484} INFO - Running <TaskInstance: tutorial.templated 2018-12-03T00:00:00+00:00 [running]> on host diederik-TECRA-Z50-A
+[2018-12-05 13:09:58,307] {bash_operator.py:74} INFO - Tmp dir root location: 
+ /tmp
+[2018-12-05 13:09:58,308] {bash_operator.py:87} INFO - Temporary script location: /tmp/airflowtmpyu2z6n1z/templatedrpt2oogv
+[2018-12-05 13:09:58,308] {bash_operator.py:97} INFO - Running command: 
+
+    echo "2018-12-03"
+    echo "2018-12-10"
+    echo "Parameter I passed in"
+
+    echo "2018-12-03"
+    echo "2018-12-10"
+    echo "Parameter I passed in"
+
+    echo "2018-12-03"
+    echo "2018-12-10"
+    echo "Parameter I passed in"
+
+    echo "2018-12-03"
+    echo "2018-12-10"
+    echo "Parameter I passed in"
+
+    echo "2018-12-03"
+    echo "2018-12-10"
+    echo "Parameter I passed in"
+
+[2018-12-05 13:09:58,312] {bash_operator.py:106} INFO - Output:
+[2018-12-05 13:09:58,312] {bash_operator.py:110} INFO - 2018-12-03
+[2018-12-05 13:09:58,312] {bash_operator.py:110} INFO - 2018-12-10
+[2018-12-05 13:09:58,313] {bash_operator.py:110} INFO - Parameter I passed in
+[2018-12-05 13:09:58,313] {bash_operator.py:110} INFO - 2018-12-03
+[2018-12-05 13:09:58,313] {bash_operator.py:110} INFO - 2018-12-10
+[2018-12-05 13:09:58,313] {bash_operator.py:110} INFO - Parameter I passed in
+[2018-12-05 13:09:58,313] {bash_operator.py:110} INFO - 2018-12-03
+[2018-12-05 13:09:58,313] {bash_operator.py:110} INFO - 2018-12-10
+[2018-12-05 13:09:58,313] {bash_operator.py:110} INFO - Parameter I passed in
+[2018-12-05 13:09:58,313] {bash_operator.py:110} INFO - 2018-12-03
+[2018-12-05 13:09:58,313] {bash_operator.py:110} INFO - 2018-12-10
+[2018-12-05 13:09:58,313] {bash_operator.py:110} INFO - Parameter I passed in
+[2018-12-05 13:09:58,313] {bash_operator.py:110} INFO - 2018-12-03
+[2018-12-05 13:09:58,313] {bash_operator.py:110} INFO - 2018-12-10
+[2018-12-05 13:09:58,313] {bash_operator.py:110} INFO - Parameter I passed in
+[2018-12-05 13:09:58,313] {bash_operator.py:114} INFO - Command exited with return code 0
+[2018-12-05 13:10:02,460] {logging_mixin.py:95} INFO - [2018-12-05 13:10:02,459] {jobs.py:2627} INFO - Task exited with return code 0

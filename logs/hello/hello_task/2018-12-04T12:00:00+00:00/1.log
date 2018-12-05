@@ -1,0 +1,32 @@
+[2018-12-05 13:00:09,996] {models.py:1361} INFO - Dependencies all met for <TaskInstance: hello.hello_task 2018-12-04T12:00:00+00:00 [queued]>
+[2018-12-05 13:00:10,000] {models.py:1361} INFO - Dependencies all met for <TaskInstance: hello.hello_task 2018-12-04T12:00:00+00:00 [queued]>
+[2018-12-05 13:00:10,000] {models.py:1573} INFO - 
+--------------------------------------------------------------------------------
+Starting attempt 1 of 1
+--------------------------------------------------------------------------------
+
+[2018-12-05 13:00:10,016] {models.py:1595} INFO - Executing <Task(PythonOperator): hello_task> on 2018-12-04T12:00:00+00:00
+[2018-12-05 13:00:10,016] {base_task_runner.py:118} INFO - Running: ['bash', '-c', 'airflow run hello hello_task 2018-12-04T12:00:00+00:00 --job_id 7 --raw -sd DAGS_FOLDER/hello_world.py --cfg_path /tmp/tmpbktqcug4']
+[2018-12-05 13:00:10,568] {base_task_runner.py:101} INFO - Job 7: Subtask hello_task [2018-12-05 13:00:10,567] {plugins_manager.py:100} ERROR - invalid syntax (my_operators.py, line 20)
+[2018-12-05 13:00:10,568] {base_task_runner.py:101} INFO - Job 7: Subtask hello_task Traceback (most recent call last):
+[2018-12-05 13:00:10,568] {base_task_runner.py:101} INFO - Job 7: Subtask hello_task   File "/home/diederik/anaconda3/lib/python3.6/site-packages/airflow/plugins_manager.py", line 89, in <module>
+[2018-12-05 13:00:10,568] {base_task_runner.py:101} INFO - Job 7: Subtask hello_task     m = imp.load_source(namespace, filepath)
+[2018-12-05 13:00:10,568] {base_task_runner.py:101} INFO - Job 7: Subtask hello_task   File "/home/diederik/anaconda3/lib/python3.6/imp.py", line 172, in load_source
+[2018-12-05 13:00:10,568] {base_task_runner.py:101} INFO - Job 7: Subtask hello_task     module = _load(spec)
+[2018-12-05 13:00:10,568] {base_task_runner.py:101} INFO - Job 7: Subtask hello_task   File "<frozen importlib._bootstrap>", line 684, in _load
+[2018-12-05 13:00:10,568] {base_task_runner.py:101} INFO - Job 7: Subtask hello_task   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+[2018-12-05 13:00:10,568] {base_task_runner.py:101} INFO - Job 7: Subtask hello_task   File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+[2018-12-05 13:00:10,568] {base_task_runner.py:101} INFO - Job 7: Subtask hello_task   File "<frozen importlib._bootstrap_external>", line 781, in get_code
+[2018-12-05 13:00:10,568] {base_task_runner.py:101} INFO - Job 7: Subtask hello_task   File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+[2018-12-05 13:00:10,568] {base_task_runner.py:101} INFO - Job 7: Subtask hello_task   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+[2018-12-05 13:00:10,568] {base_task_runner.py:101} INFO - Job 7: Subtask hello_task   File "/home/diederik/airflow/plugins/my_operators.py", line 20
+[2018-12-05 13:00:10,568] {base_task_runner.py:101} INFO - Job 7: Subtask hello_task     class MyFirstPlugin(AirflowPlugin):
+[2018-12-05 13:00:10,568] {base_task_runner.py:101} INFO - Job 7: Subtask hello_task         ^
+[2018-12-05 13:00:10,568] {base_task_runner.py:101} INFO - Job 7: Subtask hello_task SyntaxError: invalid syntax
+[2018-12-05 13:00:10,568] {base_task_runner.py:101} INFO - Job 7: Subtask hello_task [2018-12-05 13:00:10,567] {plugins_manager.py:101} ERROR - Failed to import plugin /home/diederik/airflow/plugins/my_operators.py
+[2018-12-05 13:00:10,580] {base_task_runner.py:101} INFO - Job 7: Subtask hello_task [2018-12-05 13:00:10,580] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2018-12-05 13:00:10,722] {base_task_runner.py:101} INFO - Job 7: Subtask hello_task [2018-12-05 13:00:10,722] {models.py:271} INFO - Filling up the DagBag from /home/diederik/airflow/dags/hello_world.py
+[2018-12-05 13:00:10,793] {base_task_runner.py:101} INFO - Job 7: Subtask hello_task [2018-12-05 13:00:10,793] {cli.py:484} INFO - Running <TaskInstance: hello.hello_task 2018-12-04T12:00:00+00:00 [running]> on host diederik-TECRA-Z50-A
+[2018-12-05 13:00:10,803] {logging_mixin.py:95} INFO - Diederik says Hello
+[2018-12-05 13:00:10,804] {python_operator.py:96} INFO - Done. Returned value was: None
+[2018-12-05 13:00:14,993] {logging_mixin.py:95} INFO - [2018-12-05 13:00:14,992] {jobs.py:2627} INFO - Task exited with return code 0

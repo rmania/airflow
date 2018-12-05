@@ -1,0 +1,30 @@
+[2018-12-05 13:00:02,364] {models.py:1361} INFO - Dependencies all met for <TaskInstance: hello.dummy_task 2018-12-04T12:00:00+00:00 [queued]>
+[2018-12-05 13:00:02,366] {models.py:1361} INFO - Dependencies all met for <TaskInstance: hello.dummy_task 2018-12-04T12:00:00+00:00 [queued]>
+[2018-12-05 13:00:02,366] {models.py:1573} INFO - 
+--------------------------------------------------------------------------------
+Starting attempt 1 of 4
+--------------------------------------------------------------------------------
+
+[2018-12-05 13:00:02,381] {models.py:1595} INFO - Executing <Task(DummyOperator): dummy_task> on 2018-12-04T12:00:00+00:00
+[2018-12-05 13:00:02,382] {base_task_runner.py:118} INFO - Running: ['bash', '-c', 'airflow run hello dummy_task 2018-12-04T12:00:00+00:00 --job_id 6 --raw -sd DAGS_FOLDER/hello_world.py --cfg_path /tmp/tmpn0lf16lm']
+[2018-12-05 13:00:02,960] {base_task_runner.py:101} INFO - Job 6: Subtask dummy_task [2018-12-05 13:00:02,959] {plugins_manager.py:100} ERROR - invalid syntax (my_operators.py, line 20)
+[2018-12-05 13:00:02,960] {base_task_runner.py:101} INFO - Job 6: Subtask dummy_task Traceback (most recent call last):
+[2018-12-05 13:00:02,960] {base_task_runner.py:101} INFO - Job 6: Subtask dummy_task   File "/home/diederik/anaconda3/lib/python3.6/site-packages/airflow/plugins_manager.py", line 89, in <module>
+[2018-12-05 13:00:02,960] {base_task_runner.py:101} INFO - Job 6: Subtask dummy_task     m = imp.load_source(namespace, filepath)
+[2018-12-05 13:00:02,960] {base_task_runner.py:101} INFO - Job 6: Subtask dummy_task   File "/home/diederik/anaconda3/lib/python3.6/imp.py", line 172, in load_source
+[2018-12-05 13:00:02,960] {base_task_runner.py:101} INFO - Job 6: Subtask dummy_task     module = _load(spec)
+[2018-12-05 13:00:02,960] {base_task_runner.py:101} INFO - Job 6: Subtask dummy_task   File "<frozen importlib._bootstrap>", line 684, in _load
+[2018-12-05 13:00:02,960] {base_task_runner.py:101} INFO - Job 6: Subtask dummy_task   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+[2018-12-05 13:00:02,960] {base_task_runner.py:101} INFO - Job 6: Subtask dummy_task   File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+[2018-12-05 13:00:02,960] {base_task_runner.py:101} INFO - Job 6: Subtask dummy_task   File "<frozen importlib._bootstrap_external>", line 781, in get_code
+[2018-12-05 13:00:02,960] {base_task_runner.py:101} INFO - Job 6: Subtask dummy_task   File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+[2018-12-05 13:00:02,960] {base_task_runner.py:101} INFO - Job 6: Subtask dummy_task   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+[2018-12-05 13:00:02,961] {base_task_runner.py:101} INFO - Job 6: Subtask dummy_task   File "/home/diederik/airflow/plugins/my_operators.py", line 20
+[2018-12-05 13:00:02,961] {base_task_runner.py:101} INFO - Job 6: Subtask dummy_task     class MyFirstPlugin(AirflowPlugin):
+[2018-12-05 13:00:02,961] {base_task_runner.py:101} INFO - Job 6: Subtask dummy_task         ^
+[2018-12-05 13:00:02,961] {base_task_runner.py:101} INFO - Job 6: Subtask dummy_task SyntaxError: invalid syntax
+[2018-12-05 13:00:02,961] {base_task_runner.py:101} INFO - Job 6: Subtask dummy_task [2018-12-05 13:00:02,960] {plugins_manager.py:101} ERROR - Failed to import plugin /home/diederik/airflow/plugins/my_operators.py
+[2018-12-05 13:00:02,972] {base_task_runner.py:101} INFO - Job 6: Subtask dummy_task [2018-12-05 13:00:02,972] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2018-12-05 13:00:03,102] {base_task_runner.py:101} INFO - Job 6: Subtask dummy_task [2018-12-05 13:00:03,102] {models.py:271} INFO - Filling up the DagBag from /home/diederik/airflow/dags/hello_world.py
+[2018-12-05 13:00:03,175] {base_task_runner.py:101} INFO - Job 6: Subtask dummy_task [2018-12-05 13:00:03,175] {cli.py:484} INFO - Running <TaskInstance: hello.dummy_task 2018-12-04T12:00:00+00:00 [running]> on host diederik-TECRA-Z50-A
+[2018-12-05 13:00:07,370] {logging_mixin.py:95} INFO - [2018-12-05 13:00:07,369] {jobs.py:2627} INFO - Task exited with return code 0

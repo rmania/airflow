@@ -1,0 +1,13 @@
+[2018-12-05 11:50:03,489] {models.py:1361} INFO - Dependencies all met for <TaskInstance: hello.dummy_task 2018-12-05T10:50:01.125773+00:00 [queued]>
+[2018-12-05 11:50:03,491] {models.py:1361} INFO - Dependencies all met for <TaskInstance: hello.dummy_task 2018-12-05T10:50:01.125773+00:00 [queued]>
+[2018-12-05 11:50:03,491] {models.py:1573} INFO - 
+--------------------------------------------------------------------------------
+Starting attempt 1 of 4
+--------------------------------------------------------------------------------
+
+[2018-12-05 11:50:03,508] {models.py:1595} INFO - Executing <Task(DummyOperator): dummy_task> on 2018-12-05T10:50:01.125773+00:00
+[2018-12-05 11:50:03,509] {base_task_runner.py:118} INFO - Running: ['bash', '-c', 'airflow run hello dummy_task 2018-12-05T10:50:01.125773+00:00 --job_id 4 --raw -sd DAGS_FOLDER/hello_world.py --cfg_path /tmp/tmpjduvkvpp']
+[2018-12-05 11:50:04,187] {base_task_runner.py:101} INFO - Job 4: Subtask dummy_task [2018-12-05 11:50:04,186] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2018-12-05 11:50:04,324] {base_task_runner.py:101} INFO - Job 4: Subtask dummy_task [2018-12-05 11:50:04,324] {models.py:271} INFO - Filling up the DagBag from /home/diederik/airflow/dags/hello_world.py
+[2018-12-05 11:50:04,392] {base_task_runner.py:101} INFO - Job 4: Subtask dummy_task [2018-12-05 11:50:04,392] {cli.py:484} INFO - Running <TaskInstance: hello.dummy_task 2018-12-05T10:50:01.125773+00:00 [running]> on host diederik-TECRA-Z50-A
+[2018-12-05 11:50:08,490] {logging_mixin.py:95} INFO - [2018-12-05 11:50:08,489] {jobs.py:2627} INFO - Task exited with return code 0

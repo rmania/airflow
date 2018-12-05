@@ -1,0 +1,15 @@
+[2018-12-05 11:49:46,739] {models.py:1361} INFO - Dependencies all met for <TaskInstance: hello.hello_task 2018-12-03T12:00:00+00:00 [queued]>
+[2018-12-05 11:49:46,743] {models.py:1361} INFO - Dependencies all met for <TaskInstance: hello.hello_task 2018-12-03T12:00:00+00:00 [queued]>
+[2018-12-05 11:49:46,743] {models.py:1573} INFO - 
+--------------------------------------------------------------------------------
+Starting attempt 1 of 1
+--------------------------------------------------------------------------------
+
+[2018-12-05 11:49:46,760] {models.py:1595} INFO - Executing <Task(PythonOperator): hello_task> on 2018-12-03T12:00:00+00:00
+[2018-12-05 11:49:46,761] {base_task_runner.py:118} INFO - Running: ['bash', '-c', 'airflow run hello hello_task 2018-12-03T12:00:00+00:00 --job_id 3 --raw -sd DAGS_FOLDER/hello_world.py --cfg_path /tmp/tmpmoeamoax']
+[2018-12-05 11:49:47,378] {base_task_runner.py:101} INFO - Job 3: Subtask hello_task [2018-12-05 11:49:47,378] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2018-12-05 11:49:47,519] {base_task_runner.py:101} INFO - Job 3: Subtask hello_task [2018-12-05 11:49:47,519] {models.py:271} INFO - Filling up the DagBag from /home/diederik/airflow/dags/hello_world.py
+[2018-12-05 11:49:47,613] {base_task_runner.py:101} INFO - Job 3: Subtask hello_task [2018-12-05 11:49:47,613] {cli.py:484} INFO - Running <TaskInstance: hello.hello_task 2018-12-03T12:00:00+00:00 [running]> on host diederik-TECRA-Z50-A
+[2018-12-05 11:49:47,624] {logging_mixin.py:95} INFO - Diederik says Hello
+[2018-12-05 11:49:47,624] {python_operator.py:96} INFO - Done. Returned value was: None
+[2018-12-05 11:49:51,737] {logging_mixin.py:95} INFO - [2018-12-05 11:49:51,736] {jobs.py:2627} INFO - Task exited with return code 0

@@ -1,0 +1,37 @@
+[2018-12-05 13:09:32,571] {models.py:1361} INFO - Dependencies all met for <TaskInstance: tutorial.print_date 2018-12-03T00:00:00+00:00 [queued]>
+[2018-12-05 13:09:32,573] {models.py:1361} INFO - Dependencies all met for <TaskInstance: tutorial.print_date 2018-12-03T00:00:00+00:00 [queued]>
+[2018-12-05 13:09:32,573] {models.py:1573} INFO - 
+--------------------------------------------------------------------------------
+Starting attempt 1 of 2
+--------------------------------------------------------------------------------
+
+[2018-12-05 13:09:32,592] {models.py:1595} INFO - Executing <Task(BashOperator): print_date> on 2018-12-03T00:00:00+00:00
+[2018-12-05 13:09:32,592] {base_task_runner.py:118} INFO - Running: ['bash', '-c', 'airflow run tutorial print_date 2018-12-03T00:00:00+00:00 --job_id 9 --raw -sd DAGS_FOLDER/example_dags/tutorial.py --cfg_path /tmp/tmpl751fn8c']
+[2018-12-05 13:09:33,806] {base_task_runner.py:101} INFO - Job 9: Subtask print_date [2018-12-05 13:09:33,804] {plugins_manager.py:100} ERROR - invalid syntax (my_operators.py, line 20)
+[2018-12-05 13:09:33,806] {base_task_runner.py:101} INFO - Job 9: Subtask print_date Traceback (most recent call last):
+[2018-12-05 13:09:33,806] {base_task_runner.py:101} INFO - Job 9: Subtask print_date   File "/home/diederik/anaconda3/lib/python3.6/site-packages/airflow/plugins_manager.py", line 89, in <module>
+[2018-12-05 13:09:33,806] {base_task_runner.py:101} INFO - Job 9: Subtask print_date     m = imp.load_source(namespace, filepath)
+[2018-12-05 13:09:33,806] {base_task_runner.py:101} INFO - Job 9: Subtask print_date   File "/home/diederik/anaconda3/lib/python3.6/imp.py", line 172, in load_source
+[2018-12-05 13:09:33,806] {base_task_runner.py:101} INFO - Job 9: Subtask print_date     module = _load(spec)
+[2018-12-05 13:09:33,806] {base_task_runner.py:101} INFO - Job 9: Subtask print_date   File "<frozen importlib._bootstrap>", line 684, in _load
+[2018-12-05 13:09:33,807] {base_task_runner.py:101} INFO - Job 9: Subtask print_date   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+[2018-12-05 13:09:33,807] {base_task_runner.py:101} INFO - Job 9: Subtask print_date   File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+[2018-12-05 13:09:33,807] {base_task_runner.py:101} INFO - Job 9: Subtask print_date   File "<frozen importlib._bootstrap_external>", line 781, in get_code
+[2018-12-05 13:09:33,807] {base_task_runner.py:101} INFO - Job 9: Subtask print_date   File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+[2018-12-05 13:09:33,807] {base_task_runner.py:101} INFO - Job 9: Subtask print_date   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+[2018-12-05 13:09:33,807] {base_task_runner.py:101} INFO - Job 9: Subtask print_date   File "/home/diederik/airflow/plugins/my_operators.py", line 20
+[2018-12-05 13:09:33,807] {base_task_runner.py:101} INFO - Job 9: Subtask print_date     class MyFirstPlugin(AirflowPlugin):
+[2018-12-05 13:09:33,807] {base_task_runner.py:101} INFO - Job 9: Subtask print_date         ^
+[2018-12-05 13:09:33,807] {base_task_runner.py:101} INFO - Job 9: Subtask print_date SyntaxError: invalid syntax
+[2018-12-05 13:09:33,808] {base_task_runner.py:101} INFO - Job 9: Subtask print_date [2018-12-05 13:09:33,807] {plugins_manager.py:101} ERROR - Failed to import plugin /home/diederik/airflow/plugins/my_operators.py
+[2018-12-05 13:09:33,841] {base_task_runner.py:101} INFO - Job 9: Subtask print_date [2018-12-05 13:09:33,841] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2018-12-05 13:09:34,105] {base_task_runner.py:101} INFO - Job 9: Subtask print_date [2018-12-05 13:09:34,104] {models.py:271} INFO - Filling up the DagBag from /home/diederik/airflow/dags/example_dags/tutorial.py
+[2018-12-05 13:09:34,248] {base_task_runner.py:101} INFO - Job 9: Subtask print_date [2018-12-05 13:09:34,248] {cli.py:484} INFO - Running <TaskInstance: tutorial.print_date 2018-12-03T00:00:00+00:00 [running]> on host diederik-TECRA-Z50-A
+[2018-12-05 13:09:34,268] {bash_operator.py:74} INFO - Tmp dir root location: 
+ /tmp
+[2018-12-05 13:09:34,269] {bash_operator.py:87} INFO - Temporary script location: /tmp/airflowtmpx6req_v1/print_datexs8d2ffw
+[2018-12-05 13:09:34,269] {bash_operator.py:97} INFO - Running command: date
+[2018-12-05 13:09:34,277] {bash_operator.py:106} INFO - Output:
+[2018-12-05 13:09:34,290] {bash_operator.py:110} INFO - wo  5 dec 2018 13:09:34 CET
+[2018-12-05 13:09:34,291] {bash_operator.py:114} INFO - Command exited with return code 0
+[2018-12-05 13:09:37,552] {logging_mixin.py:95} INFO - [2018-12-05 13:09:37,551] {jobs.py:2627} INFO - Task exited with return code 0
